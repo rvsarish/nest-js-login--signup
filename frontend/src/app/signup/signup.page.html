@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="mango">
+  <ion-title>Registration</ion-title>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="username" required label="Username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="email" [(ngModel)]="email" required label="Email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="password" required label="Password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="confirmPassword" required label="Confirm Password"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="signUp()">Sign Up</ion-button>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</ion-content>
